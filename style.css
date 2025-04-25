@@ -38,6 +38,21 @@ h1 {
   transition: top 1s, left 0.3s;
 }
 
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.prize {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  transition: bottom 1s;
+}
+
 .prizes {
   position: absolute;
   bottom: 10px;

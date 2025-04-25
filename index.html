@@ -7,7 +7,10 @@
   </head>
   <body>
     <h1>Claw Machine</h1>
-    <div class="score">Score: <span id="score">0</span></div>
+    <div class="scoreboard">
+      <div>Score: <span id="score">0</span></div>
+      <div>Time: <span id="timer">60</span>s</div>
+    </div>
 
     <div class="game-container">
       <div class="claw"></div>
@@ -18,11 +21,19 @@
       </div>
     </div>
 
+    <div class="prizes">
+      <img class="prize" src="assets/teddy.jpg" style="left: 40px" />
+      <img class="prize" src="assets/heart.jpg" style="left: 120px" />
+      <img class="prize" src="assets/star.jpg" style="left: 200px" />
+    </div>
+
     <div class="controls">
       <button id="leftBtn">⬅️</button>
       <button id="startBtn">Grab!</button>
       <button id="rightBtn">➡️</button>
     </div>
+
+    <button id="resetBtn" style="margin-top: 15px">🔁 Reset Game</button>
 
     <script src="script.js"></script>
   </body>

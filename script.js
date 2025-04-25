@@ -62,29 +62,7 @@ function startTimer() {
     if (timeLeft <= 0) {
       clearInterval(gameInterval);
       gameOver = true;
-      alert(`⏰ Time's up! Your score: ${score}`);
+      showWinScreen();
     }
   }, 1000);
 }
-
-// Reset
-resetBtn.addEventListener('click', () => {
-  score = 0;
-  timeLeft = 60;
-  clawPosition = 130;
-  claw.style.left = clawPosition + 'px';
-  claw.style.top = '0px';
-  scoreDisplay.textContent = score;
-  timerDisplay.textContent = timeLeft;
-  gameOver = false;
-
-  prizes.forEach(prize => {
-    prize.style.bottom = '0px';
-  });
-
-  clearInterval(gameInterval);
-  startTimer();
-});
-
-// Start timer on page load
-window.onload = startTimer;

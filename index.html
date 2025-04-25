@@ -6,15 +6,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>🎯 Claw Machine</h1>
+    <h1>Claw Machine</h1>
+    <div class="score">Score: <span id="score">0</span></div>
+
     <div class="game-container">
       <div class="claw"></div>
       <div class="prizes">
-        <div class="prize" style="left: 50px"></div>
+        <div class="prize" style="left: 40px"></div>
         <div class="prize" style="left: 120px"></div>
-        <div class="prize" style="left: 190px"></div>
+        <div class="prize" style="left: 200px"></div>
       </div>
+    </div>
+
+    <div class="controls">
+      <button id="leftBtn">⬅️</button>
       <button id="startBtn">Grab!</button>
+      <button id="rightBtn">➡️</button>
     </div>
 
     <script src="script.js"></script>

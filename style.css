@@ -27,6 +27,7 @@ h1 {
   overflow: hidden;
 }
 
+/* Claw */
 .claw {
   position: absolute;
   top: 0;
@@ -37,6 +38,42 @@ h1 {
   border: 3px solid #c71585;
   border-radius: 8px;
   transition: top 1s, left 0.3s;
+}
+
+.claw-top {
+  width: 100%;
+  height: 10px;
+  background: #c71585;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.claw-arm {
+  width: 5px;
+  height: 20px;
+  background: #c71585;
+  position: absolute;
+  top: 15px;
+  transition: transform 0.5s;
+}
+
+.claw-arm.left {
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+.claw-arm.right {
+  right: 5px;
+  transform: rotate(-45deg);
+}
+
+/* Add when claw is "closed" */
+.claw.closed .left {
+  transform: rotate(10deg);
+}
+
+.claw.closed .right {
+  transform: rotate(-10deg);
 }
 
 .scoreboard {
@@ -63,24 +100,33 @@ h1 {
   height: 60px;
 }
 
+/* Joystick */
 .controls {
   margin-top: 20px;
 }
 
-button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
+.joystick-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  background: #ffe4f0;
+  border: 4px solid #ff69b4;
+  border-radius: 50%;
+  overflow: hidden;
+  touch-action: none;
 }
 
-button:hover {
-  background-color: #ff1493;
+.joystick {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ff69b4;
+  border-radius: 50%;
+  top: 40px;
+  left: 40px;
+  transition: top 0.2s, left 0.2s;
+  cursor: grab;
 }
 
 /* Mobile */
@@ -90,14 +136,16 @@ button:hover {
     height: 60vh;
   }
 
-  .controls button,
+  .controls,
+  .joystick,
   #resetBtn {
     font-size: 14px;
     padding: 8px 16px;
     margin: 5px;
   }
 
-  .prize, .claw {
+  .prize,
+  .claw {
     width: 28px;
     height: 28px;
   }

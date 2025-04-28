@@ -15,7 +15,11 @@
     </div>
 
     <div class="game-container">
-      <div class="claw"></div>
+      <div class="claw">
+        <div class="claw-top"></div>
+        <div class="claw-arm left"></div>
+        <div class="claw-arm right"></div>
+      </div>
 
       <div class="prizes">
         <img class="prize" src="assets/teddy.jpg" style="left: 40px" />
@@ -25,12 +29,13 @@
     </div>
 
     <div class="controls">
-      <button id="leftBtn">⬅️</button>
-      <button id="startBtn">Grab!</button>
-      <button id="rightBtn">➡️</button>
+      <div class="joystick-container">
+        <div class="joystick"></div>
+      </div>
     </div>
 
     <button id="resetBtn" style="margin-top: 15px">🔁 Reset Game</button>
+    <audio id="grabSound" src="assets/grab.mp3"></audio>
 
     <script src="script.js"></script>
   </body>
